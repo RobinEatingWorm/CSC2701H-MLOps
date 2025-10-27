@@ -1,0 +1,4 @@
+boto3==1.40.59
+chardet==5.2.0
+pandas==2.3.3
+PyYAML==6.0.3
