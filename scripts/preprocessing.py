@@ -27,7 +27,7 @@ def get_column_mappings() -> dict[str, str]:
         "Year": ["Calendar Year", "Calendar year", "Year"]
     }
 
-    # Mappings from all variations toat appear in data to standard names
+    # Mappings from all variations that appear in data to standard names
     return {variant: default for default, variants in reverse_mappings.items() for variant in variants}
 
 
@@ -100,9 +100,11 @@ def main() -> None:
     This example only reads preprocessed data from 2024, but applies for all years.
     """
 
-    # Preprocess and save data
+    # Cover years with salary disclosures
     for year in range(1996, 2025):
         print(f"Preprocessing year {year}...")
+
+        # Preprocess and save data
         filepath = f"data/preprocessed/{year}.csv"
         preprocess_salary_disclosure(year).to_csv(filepath, index=False)
 

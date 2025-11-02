@@ -56,7 +56,7 @@ def str_to_float(ser: pd.Series) -> pd.Series:
     Returns
     -------
     ser : pd.Series
-        The Series with strings converted to floats or NaNs if not possible.
+        The Series with strings converted to floats if possible or NaNs if not possible.
     """
 
     # String to float conversion
